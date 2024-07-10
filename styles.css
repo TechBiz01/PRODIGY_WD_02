@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.watch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.outer-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #ee7752, #23a6d5, #23d5ab, #e73c7e);
+    background-size: 400% 400%;
+    animation: gradient 1s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.inner-circle {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-color: rgb(244, 72, 72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-display {
+    display: flex;
+    align-items: baseline;
+}
+
+.text {
+    color: white;
+    font-size: 23px;
+}
+
+.minute {
+    font-size: 43px;
+}
+
+.sec {
+    font-size: 34px;
+}
+
+.msec {
+    font-size: 23px;
+}
+
+.laps {
+    width: 250px;
+    overflow: auto;
+}
+
+.button-wrapper {
+    width: 240px;
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: white;
+    color: rgb(244, 72, 72);
+}
+
+.laps {
+    list-style: none;
+    color: white;
+    height: 250px;
+    overflow: auto;
+    position: relative;
+    padding: 25px 10px;
+    margin-top: 30px;
+}
+
+.laps::-webkit-scrollbar {
+    display: none;
+}
+
+.lap-item {
+    display: inline-block;
+    width: 240px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #444;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.number {
+    color: #cccccc;
+}
+
+.timestamp {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.lap-clear-button {
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    bottom: 35px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 130px;
+    padding: 10px 0;
+    border-radius: 50px;
+    background-color: #565454;
+    border: 1px solid white;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
